@@ -1,2 +1,3 @@
-﻿          1 file(s) copied.
-  BlankProject.vcxproj -> C:\Users\onyx0\source\repos\RenderKing3D\Build\BlankProject\Debug\BlankProject.exe
+﻿  The system cannot find the file specified.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(149,5): error MSB3073: The command "copy C:\Users\onyx0\Documents\RenderKing3D\\Build\RenderKing\Debug\RenderKing.dll C:\Users\onyx0\Documents\RenderKing3D\\Build\BlankProject\Debug\
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(149,5): error MSB3073: :VCEnd" exited with code 1.

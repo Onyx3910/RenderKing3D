@@ -1,7 +1,8 @@
 ﻿  Logger.cpp
   Time.cpp
+  Core.cpp
+C:\Users\onyx0\Documents\RenderKing3D\RenderKing\Source\Core\Core.cpp(2,1): error C2857: '#include' statement specified with the /YcRenderKing.h command-line option was not found in the source file
+  CoreMinimal.cpp
+C:\Users\onyx0\Documents\RenderKing3D\RenderKing\Source\Core\CoreMinimal.cpp(2,1): error C2857: '#include' statement specified with the /YcRenderKing.h command-line option was not found in the source file
   PerGameSettings.cpp
   IApplication.cpp
-  RenderKing.cpp
-     Creating library C:\Users\onyx0\source\repos\RenderKing3D\\Build\RenderKing\Debug\RenderKing.lib and object C:\Users\onyx0\source\repos\RenderKing3D\\Build\RenderKing\Debug\RenderKing.exp
-  RenderKing.vcxproj -> C:\Users\onyx0\source\repos\RenderKing3D\Build\RenderKing\Debug\RenderKing.dll
