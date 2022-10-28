@@ -8,6 +8,7 @@ PerGameSettings::PerGameSettings()
 	wcscpy_s(instance->m_GameName, L"undefined");
 	wcscpy_s(instance->m_ShortName, L"undefined");
 	wcscpy_s(instance->m_BootTime, Time::GetDateTimeString(TRUE).c_str());
+	wcscpy_s(instance->m_SplashUrl, L"..\\RenderKing\\Content\\Images\\RenderKingSplash.bmp");
 }
 
 PerGameSettings::~PerGameSettings()

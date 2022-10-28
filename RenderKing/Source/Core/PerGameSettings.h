@@ -15,6 +15,7 @@ private:
 	WCHAR m_ShortName[MAX_NAME_STRING];
 	HICON m_MainIcon;
 	WCHAR m_BootTime[MAX_NAME_STRING];
+	WCHAR m_SplashUrl[MAX_NAME_STRING];
 
 public:
 	static WCHAR* GameName() { return instance->m_GameName; }
@@ -28,4 +29,7 @@ public:
 
 	static WCHAR* BootTime() { return instance->m_BootTime; }
 	static VOID SetBootTime(UINT id) { LoadString(HInstance(), id, instance->m_BootTime, MAX_NAME_STRING); }
+
+	static WCHAR* SplashUrl() { return instance->m_SplashUrl; }
+	static VOID SetSplashUrl(UINT id) { LoadString(HInstance(), id, instance->m_SplashUrl, MAX_NAME_STRING); }
 };

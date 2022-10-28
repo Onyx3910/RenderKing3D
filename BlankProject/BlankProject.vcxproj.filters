@@ -22,26 +22,15 @@
     <Filter Include="Resources\Icons">
       <UniqueIdentifier>{381a38d2-0557-48cc-a294-77366a7a3c48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\Images">
+      <UniqueIdentifier>{4770a2c1-991a-4a9a-a871-ff60933f93f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\WinMain.cpp">
-      <Filter>Source\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\pch.cpp">
-      <Filter>Source\pch</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Application.cpp">
-      <Filter>Source\Private</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Source\pch.h">
-      <Filter>Source\pch</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application.h">
+    <ClInclude Include="Source\BlankProject.h">
       <Filter>Source\Public</Filter>
     </ClInclude>
   </ItemGroup>
@@ -54,5 +43,13 @@
     <Image Include="Content\Icons\Icons8-Windows-8-Messaging-Crown.ico">
       <Filter>Resources\Icons</Filter>
     </Image>
+    <Image Include="Content\Images\BlankProjectSplash.bmp">
+      <Filter>Resources\Images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\BlankProject.cpp">
+      <Filter>Source\Private</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

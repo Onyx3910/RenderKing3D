@@ -27,7 +27,7 @@ VOID Logger::PrintLog(const WCHAR* fmt, ...)
 	OutputDebugString(buffer);
 
 	std::wfstream outfile;
-	outfile.open(std::wstring(LogDirectory() + L"/" + LogFile()), std::ios_base::app);
+	outfile.open(std::wstring(LogDirectory() + L"\\" + LogFile()), std::ios_base::app);
 
 	if (outfile.is_open())
 	{
