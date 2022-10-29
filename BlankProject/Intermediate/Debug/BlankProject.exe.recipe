@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\onyx0\Documents\RenderKing3D\Build\RenderKing\Debug\RenderKing.dll</FullPath>
+      <FullPath>C:\Users\onyx0\Documents\RenderKing3D\Build\Debug\RenderKing.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\onyx0\Documents\RenderKing3D\Build\BlankProject\Debug\BlankProject.exe</FullPath>
+      <FullPath>C:\Users\onyx0\Documents\RenderKing3D\Build\Debug\BlankProject.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
