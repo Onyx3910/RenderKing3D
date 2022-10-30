@@ -2,11 +2,12 @@
 #include "Simulation.h"
 #include "Engine/SplashScreen.h"
 
-namespace RenderKing
+namespace Engine
 {
 	Simulation::Simulation()
 		: Win32::Window(L"MainApplication", NULL)
 	{
+		m_Timer = new Common::Timer();
 	}
 
 	Simulation::~Simulation()
@@ -15,17 +16,27 @@ namespace RenderKing
 
 	VOID Simulation::PreInitialize()
 	{
-		Logger::PrintDebugSeperator();
-		Logger::PrintLog(L"Applcation starting...\n");
-		Logger::PrintLog(L"Game Name: %s\n", PerGameSettings::GameName());
-		Logger::PrintLog(L"Boot Time: %s\n", Time::GetDateTimeString().c_str());
-		Logger::PrintLog(L"Engine Mode: %s\n", Engine::EngineModeToString().c_str());
-		Logger::PrintDebugSeperator();
+		Common::Logger::PrintDebugSeperator();
+		Common::Logger::PrintLog(L"Applcation starting...\n");
+		Common::Logger::PrintLog(L"Game Name: %s\n", PerGameSettings::GameName());
+		Common::Logger::PrintLog(L"Boot Time: %s\n", Common::Timer::GetDateTimeString().c_str());
+		Common::Logger::PrintLog(L"Engine Mode: %s\n", Engine::EngineModeToString().c_str());
+		Common::Logger::PrintDebugSeperator();
 
 		SplashScreen::Open();
 
 		Win32::Window::RegisterNewClass();
 		Win32::Window::Initialize();
+	}
+
+	VOID Simulation::Initialize()
+	{
+		Timer()->Reset();
+	}
+
+	VOID Simulation::Update()
+	{
+		Timer()->Tick();
 	}
 
 	LRESULT Simulation::MessageHandler(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)

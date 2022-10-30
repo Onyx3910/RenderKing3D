@@ -2,7 +2,7 @@
 #include "CmdLineArgs.h"
 #include <algorithm>
 
-VOID CmdLineArgs::ReadArguments()
+VOID Common::CmdLineArgs::ReadArguments()
 {
 	int argc = 0;
 	LPWSTR* argv = CommandLineToArgvW(GetCommandLine(), &argc);
@@ -20,7 +20,7 @@ VOID CmdLineArgs::ReadArguments()
 	}
 }
 
-VOID CmdLineArgs::ReadArgument(const WCHAR* argument)
+VOID Common::CmdLineArgs::ReadArgument(const WCHAR* argument)
 {
 	if (wcscmp(argument, L"mtail") == 0)
 		Logger::StartMTail();

@@ -7,7 +7,7 @@
 
 namespace Win32 
 {
-	class Caption
+	class RENDERKING_API Caption
 	{
 	public:
 		struct CaptionButton {

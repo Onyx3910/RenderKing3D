@@ -2,7 +2,7 @@
 #include "Engine/Simulation.h"
 #include "Platform/Windows32/WinEntry.h"
 
-class BlankProject : public RenderKing::Simulation
+class BlankProject : public Engine::Simulation
 {
 public:
 	BlankProject();
@@ -13,10 +13,10 @@ public:
 	VOID SetupPerGameSettings();
 
 	// Called to initialize the BlankProject
-	VOID Initialize();
+	VOID Initialize() override;
 
 	// Game Loop - Called in a loop while the BlankProject is running
-	VOID Update();
+	VOID Update() override;
 };
 
 ENTRYAPP(BlankProject)
@@ -39,8 +39,10 @@ VOID BlankProject::SetupPerGameSettings()
 
 VOID BlankProject::Initialize()
 {
+	Simulation::Initialize();
 }
 
 VOID BlankProject::Update()
 {
+	Simulation::Update();
 }

@@ -8,25 +8,21 @@ extern Win32::IApplication* EntryApplication();
 
 INT CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
-
-	auto EntryApp = EntryApplication();
+	Engine::Simulation* simulation = dynamic_cast<Engine::Simulation*>(EntryApplication());
+	if (!simulation) return 1;
 
 	PerGameSettings GameSettings;
-	EntryApp->SetupPerGameSettings();
+	simulation->SetupPerGameSettings();
 
-	CmdLineArgs::ReadArguments();
+	Common::CmdLineArgs::ReadArguments();
 
-	Logger logger;
+	Common::Logger logger;
 
-	EntryApp->PreInitialize();
-
-
-
-	EntryApp->Initialize();
-
-
+	simulation->PreInitialize();
+	simulation->Initialize();
 
 	MSG msg = { 0 };
+	simulation->Timer()->Reset();
 	while (msg.message != WM_QUIT)
 	{
 		// If there are Window messages then process them.
@@ -36,7 +32,7 @@ INT CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 			DispatchMessage(&msg);
 		}
 		else {
-			EntryApp->Update();
+			simulation->Update();
 		}
 	}
 

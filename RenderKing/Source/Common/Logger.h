@@ -2,27 +2,30 @@
 
 #include <string>
 
-class RENDERKING_API Logger
+namespace Common
 {
-private:
-	static Logger* instance;
-public:
-	static Logger* Instance() { return instance; }
+	class RENDERKING_API Logger
+	{
+	private:
+		static Logger* instance;
+	public:
+		static Logger* Instance() { return instance; }
 
-public:
-	Logger();
-	~Logger();
+	public:
+		Logger();
+		~Logger();
 
-	static VOID PrintLog(const WCHAR* fmt, ...);
-	static std::wstring LogDirectory();
-	static std::wstring LogFile();
+		static VOID PrintLog(const WCHAR* fmt, ...);
+		static std::wstring LogDirectory();
+		static std::wstring LogFile();
 
-	// Print a line of '-' chars
-	static VOID PrintDebugSeperator();
+		// Print a line of '-' chars
+		static VOID PrintDebugSeperator();
 
-	// Check to see if MTail is already running
-	static BOOL IsMTailRunning();
+		// Check to see if MTail is already running
+		static BOOL IsMTailRunning();
 
-	// Start MTail application
-	static VOID StartMTail();
-};
+		// Start MTail application
+		static VOID StartMTail();
+	};
+}

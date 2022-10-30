@@ -1,9 +1,9 @@
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\renderking.pch
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\vc143.pdb
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\vc143.idb
+c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\timer.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\cmdlineargs.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\logger.obj
-c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\time.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\core.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\coredefinitions.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\coreminimal.obj
@@ -17,8 +17,8 @@ c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\win32utils.o
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\window.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\renderking.obj
 c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\caption.obj
-c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\renderking.ilk
 c:\users\onyx0\documents\renderking3d\build\debug\renderking.dll
+c:\users\onyx0\documents\renderking3d\renderking\intermediate\debug\renderking.ilk
 c:\users\onyx0\documents\renderking3d\build\debug\renderking.pdb
 c:\users\onyx0\documents\renderking3d\build\debug\renderking.lib
 c:\users\onyx0\documents\renderking3d\build\debug\renderking.exp

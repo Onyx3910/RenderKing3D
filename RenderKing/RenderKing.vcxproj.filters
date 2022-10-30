@@ -76,9 +76,6 @@
     <ClCompile Include="Source\Core\CoreMinimal.cpp">
       <Filter>Source\Core\Private</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Common\Time.cpp">
-      <Filter>Source\Common\Private</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Common\Logger.cpp">
       <Filter>Source\Common\Private</Filter>
     </ClCompile>
@@ -112,6 +109,9 @@
     <ClCompile Include="Source\Platform\Windows32\Caption.cpp">
       <Filter>Source\Platform\Win32\Private</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Common\Timer.cpp">
+      <Filter>Source\Common\Private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\RenderKing.h">
@@ -128,9 +128,6 @@
     </ClInclude>
     <ClInclude Include="Source\Common\Logger.h">
       <Filter>Source\Common\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Common\Time.h">
-      <Filter>Source\Common\Public</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\CoreDefinitions.h">
       <Filter>Source\Core\Public</Filter>
@@ -164,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="Source\Platform\Windows32\Caption.h">
       <Filter>Source\Platform\Win32\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Timer.h">
+      <Filter>Source\Common\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
