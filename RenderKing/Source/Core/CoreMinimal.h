@@ -19,3 +19,6 @@
 #include "Platform/Windows32/IApplication.h"
 
 #endif
+
+#include "Renderer/d3dUtil.h"
+#include "Renderer/d3dxContext.h"

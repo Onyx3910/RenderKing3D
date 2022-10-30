@@ -8,6 +8,7 @@ namespace Engine
 		Simulation();
 		~Simulation();
 
+	public:
 		virtual VOID PreInitialize() override;
 		virtual VOID Initialize() override;
 		virtual VOID Update() override;
@@ -15,7 +16,9 @@ namespace Engine
 
 	private:
 		Common::Timer* m_Timer;
+		Renderer::d3dxContext* m_d3dxContext;
 	public:
 		Common::Timer* Timer() { return m_Timer; }
+		Renderer::d3dxContext* D3DXContext() { return m_d3dxContext; }
 	};
 }

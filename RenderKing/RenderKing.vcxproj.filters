@@ -62,6 +62,18 @@
     <Filter Include="Source\Engine\Private">
       <UniqueIdentifier>{4d68e2fb-60b8-423b-8d20-24c96e91337a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Renderer">
+      <UniqueIdentifier>{7ea3e781-b198-42c5-9afc-0ebcd61d5390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\Classes">
+      <UniqueIdentifier>{ff6f3c14-74be-4fae-99ff-f4e98cfebb62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\Public">
+      <UniqueIdentifier>{5f92c192-e084-4127-b974-a525ecced4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Renderer\Private">
+      <UniqueIdentifier>{2bb48520-6ba1-4bff-a79c-33c8f46e2686}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\RenderKing.cpp">
@@ -111,6 +123,21 @@
     </ClCompile>
     <ClCompile Include="Source\Common\Timer.cpp">
       <Filter>Source\Common\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\d3dx12.cpp">
+      <Filter>Source\Renderer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\d3dUtil.cpp">
+      <Filter>Source\Renderer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\DDSTextureLoader.cpp">
+      <Filter>Source\Renderer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\MathHelper.cpp">
+      <Filter>Source\Renderer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Renderer\d3dxContext.cpp">
+      <Filter>Source\Renderer\Private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +191,21 @@
     </ClInclude>
     <ClInclude Include="Source\Common\Timer.h">
       <Filter>Source\Common\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\d3dx12.h">
+      <Filter>Source\Renderer\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\d3dUtil.h">
+      <Filter>Source\Renderer\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\DDSTextureLoader.h">
+      <Filter>Source\Renderer\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\MathHelper.h">
+      <Filter>Source\Renderer\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Renderer\d3dxContext.h">
+      <Filter>Source\Renderer\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

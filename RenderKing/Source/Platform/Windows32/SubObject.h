@@ -24,7 +24,9 @@ namespace Win32
 
 	public:
 		HWND Handle() { return m_Handle; }
+		std::wstring Title() { return m_Title; }
 	public:
 		VOID Handle(HWND hwnd) { m_Handle = hwnd; }
+		VOID Title(std::wstring title) { m_Title = title; }
 	};
 }

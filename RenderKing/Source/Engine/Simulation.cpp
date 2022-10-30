@@ -8,6 +8,7 @@ namespace Engine
 		: Win32::Window(L"MainApplication", NULL)
 	{
 		m_Timer = new Common::Timer();
+		m_d3dxContext = new Renderer::d3dxContext();
 	}
 
 	Simulation::~Simulation()
@@ -32,11 +33,13 @@ namespace Engine
 	VOID Simulation::Initialize()
 	{
 		Timer()->Reset();
+		D3DXContext()->Initialize((Win32::Window*)this);
 	}
 
 	VOID Simulation::Update()
 	{
 		Timer()->Tick();
+		D3DXContext()->CalculateFrameStats(Timer());
 	}
 
 	LRESULT Simulation::MessageHandler(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)

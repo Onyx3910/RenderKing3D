@@ -33,6 +33,7 @@ INT CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 		}
 		else {
 			simulation->Update();
+			simulation->D3DXContext()->Draw(simulation->Timer()->DeltaTime());
 		}
 	}
 

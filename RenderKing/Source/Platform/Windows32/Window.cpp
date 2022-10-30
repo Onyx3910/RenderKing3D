@@ -39,11 +39,11 @@ namespace Win32
 	{
 		switch (message)
 		{
-		case WM_NCCREATE: { OnNonClientCreate();				}							return TRUE;
-		case WM_NCACTIVATE: { OnNonClientActivate(LOWORD(wParam) != WA_INACTIVE); }			return TRUE;
-		case WM_NCPAINT: { OnNonClientPaint((HRGN)wParam);	}							return FALSE;
+		case WM_NCCREATE: { OnNonClientCreate(); } return TRUE;
+		case WM_NCACTIVATE: { OnNonClientActivate(LOWORD(wParam) != WA_INACTIVE); } return TRUE;
+		case WM_NCPAINT: { OnNonClientPaint((HRGN)wParam); } return FALSE;
 		case WM_NCLBUTTONDOWN: { OnNonClientLeftMouseButtonDown(); } break;
-		case WM_NCLBUTTONDBLCLK: { Win32::Utils::MaximizeWindow(Handle()); }	return 0;
+		case WM_NCLBUTTONDBLCLK: { Win32::Utils::MaximizeWindow(Handle()); } return 0;
 
 
 		case WM_GETMINMAXINFO:			OnGetMinMaxInfo(((MINMAXINFO*)lParam));			return 0;
