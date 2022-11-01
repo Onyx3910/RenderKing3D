@@ -16,15 +16,15 @@ namespace Renderer
 	public:
 		bool Get4xMsaaState() const;
 		VOID Set4xMsaaState(bool value);
-		virtual bool Initialize(Win32::Window* window);
 		VOID CalculateFrameStats(Common::Timer* timer);
 		virtual VOID Draw(FLOAT deltaTime);
+		virtual VOID OnResize(SIZE size);
+		virtual bool Initialize(Win32::Window* window);
 
 	protected:
 		Win32::Window* m_Window;
 
 		virtual VOID CreateRtvAndDsvDescriptorHeaps();
-		virtual VOID OnResize(SIZE size);
 
 	protected:
 		bool InitDirect3D();
@@ -40,6 +40,8 @@ namespace Renderer
 		VOID LogAdapters();
 		VOID LogAdapterOutputs(IDXGIAdapter* adapter);
 		VOID LogOutputDisplayModes(IDXGIOutput* output, DXGI_FORMAT format);
+
+		bool	  m_Initialized = false;
 
 		bool      m4xMsaaState = false;    // 4X MSAA enabled
 		UINT      m4xMsaaQuality = 0;      // quality level of 4X MSAA
@@ -74,6 +76,9 @@ namespace Renderer
 		D3D_DRIVER_TYPE md3dDriverType = D3D_DRIVER_TYPE_HARDWARE;
 		DXGI_FORMAT mBackBufferFormat = DXGI_FORMAT_R8G8B8A8_UNORM;
 		DXGI_FORMAT mDepthStencilFormat = DXGI_FORMAT_D24_UNORM_S8_UINT;
+
+	public:
+		bool Initialized() { return m_Initialized; }
 	};
 }
 

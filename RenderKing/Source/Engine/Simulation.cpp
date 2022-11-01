@@ -33,7 +33,7 @@ namespace Engine
 	VOID Simulation::Initialize()
 	{
 		Timer()->Reset();
-		D3DXContext()->Initialize((Win32::Window*)this);
+		m_d3dxContext->Initialize(this);
 	}
 
 	VOID Simulation::Update()
@@ -46,7 +46,11 @@ namespace Engine
 	{
 		switch (message)
 		{
-
+		case WM_NCCREATE: 
+		{
+			Common::Logger::PrintLog(L"NCCREATE command");
+		} break;
+		case WM_SIZE: { if(D3DXContext()->Initialized()) D3DXContext()->OnResize(m_Size); } break;
 		}
 
 		return Window::MessageHandler(hwnd, message, wParam, lParam);

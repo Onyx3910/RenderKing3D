@@ -128,7 +128,7 @@ public:
         const std::string& target);
 };
 
-class DxException
+class RENDERKING_API DxException
 {
 public:
     DxException() = default;

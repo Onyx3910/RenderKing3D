@@ -35,6 +35,7 @@ namespace Renderer
         // Do the initial resize code.
         OnResize(m_Window->Size());
 
+        m_Initialized = true;
         return true;
     }
 
@@ -57,7 +58,7 @@ namespace Renderer
         ThrowIfFailed(md3dDevice->CreateDescriptorHeap(&dsvHeapDesc, IID_PPV_ARGS(mDsvHeap.GetAddressOf())));
     }
 
-    void d3dxContext::OnResize(SIZE size)
+    VOID d3dxContext::OnResize(SIZE size)
     {
         assert(md3dDevice);
         assert(mSwapChain);
@@ -76,7 +77,7 @@ namespace Renderer
         // Resize the swap chain.
         ThrowIfFailed(mSwapChain->ResizeBuffers(
             SwapChainBufferCount,
-            (UINT)size.cx, (UINT)size.cy,
+            size.cx, size.cy,
             mBackBufferFormat,
             DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH));
 
@@ -412,7 +413,7 @@ namespace Renderer
             text += L"\n";
 
             OutputDebugString(text.c_str());
-            Common::Logger::PrintLog(text.c_str());
+            //Common::Logger::PrintLog(text.c_str());
 
             adapterList.push_back(adapter);
 
@@ -470,7 +471,7 @@ namespace Renderer
                 L"\n";
 
             ::OutputDebugString(text.c_str());
-            Common::Logger::PrintLog(text.c_str());
+            //Common::Logger::PrintLog(text.c_str());
         }
     }
 }
